@@ -15,6 +15,7 @@ Source0:	http://dl.sourceforge.net/vavoom/vmdl_doom_13-1.zip
 Source1:	http://dl.sourceforge.net/vavoom/vmdl_heretic_13.zip
 Source2:	http://dl.sourceforge.net/vavoom/vmdl_hexen_13-1.zip
 Source3:	http://dl.sourceforge.net/vavoom/vmdl_strife_13.zip
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:      noarch
 Requires:	%{oname}
 
