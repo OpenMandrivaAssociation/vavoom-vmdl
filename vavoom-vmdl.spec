@@ -1,7 +1,7 @@
 %define	oname	vavoom
 %define	name	%{oname}-vmdl
 %define	version	1.3.1
-%define	release	%mkrel 1
+%define	release	%mkrel 3
 
 Name:           %{name}
 Version:        %{version}
