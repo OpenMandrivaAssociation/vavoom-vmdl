@@ -1,22 +1,22 @@
 %define	oname	vavoom
 %define	name	%{oname}-vmdl
-%define	version	1.3.1
-%define	release	%mkrel 4
+%define	version	1.4.2
+%define	release	%mkrel 1
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
 Epoch:		1
-Summary:        VMDL files for %{oname}
-Group:          Games/Arcade
+Summary:	VMDL files for %{oname}
+Group:		Games/Arcade
 License:	GPL
 URL:		http://vavoom-engine.com/
-Source0:	http://dl.sourceforge.net/vavoom/vmdl_doom_13-1.zip
-Source1:	http://dl.sourceforge.net/vavoom/vmdl_heretic_13.zip
-Source2:	http://dl.sourceforge.net/vavoom/vmdl_hexen_13-1.zip
-Source3:	http://dl.sourceforge.net/vavoom/vmdl_strife_13.zip
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildArch:      noarch
+Source0:	http://dl.sourceforge.net/vavoom/vmodels-doom-%{version}.zip
+Source1:	http://dl.sourceforge.net/vavoom/vmodels-heretic-%{version}.zip
+Source2:	http://dl.sourceforge.net/vavoom/vmodels-hexen-%{version}.zip
+Source3:	http://dl.sourceforge.net/vavoom/vmodels-strife-%{version}.zip
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch:	noarch
 Requires:	%{oname}
 
 %description
@@ -29,7 +29,7 @@ Requires:	%{oname}
 # Move the documentation files around to make it easier for packaging
 for i in doom heretic hexen strife ; do
     mkdir $i
-    mv basev/$i/models/*.txt $i
+    mv basev/$i/*.txt $i
 done
 
 %install
@@ -42,10 +42,10 @@ rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
-%{_gamesdatadir}/%{oname}/basev/doom/models
-%{_gamesdatadir}/%{oname}/basev/strife/models
-%{_gamesdatadir}/%{oname}/basev/heretic/models
-%{_gamesdatadir}/%{oname}/basev/hexen/models
+%{_gamesdatadir}/%{oname}/basev/doom
+%{_gamesdatadir}/%{oname}/basev/strife
+%{_gamesdatadir}/%{oname}/basev/heretic
+%{_gamesdatadir}/%{oname}/basev/hexen
 %doc doom heretic hexen strife
 
 
