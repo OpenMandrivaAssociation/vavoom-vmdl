@@ -10,7 +10,7 @@ Epoch:		1
 Summary:	VMDL files for %{oname}
 Group:		Games/Arcade
 License:	GPL
-URL:		http://vavoom-engine.com/
+URL:		https://vavoom-engine.com/
 Source0:	http://dl.sourceforge.net/vavoom/vmodels-doom-%{version}.zip
 Source1:	http://dl.sourceforge.net/vavoom/vmodels-heretic-%{version}.zip
 Source2:	http://dl.sourceforge.net/vavoom/vmodels-hexen-%{version}.zip
